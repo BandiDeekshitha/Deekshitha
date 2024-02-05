@@ -60,7 +60,7 @@ def app():
         y_train.append(data_training_array[i, 0])
     x_train, y_train = np.array(x_train), np.array(y_train)
 
-    model = load_model(r'C:\Users\deekshitha_bandi\Desktop\STOCKPULSE-B1818-AFCA9E4F09D8\keras_model.h5')  # Path to the directory containing the SavedModel
+    model = load_model(r'./keras_model.h5')  # Path to the directory containing the SavedModel
 
 
     # model = load_model(r'C:\Users\deekshitha_bandi\Desktop\stockpulse-b1818-afca9e4f09d8\keras_model.h5') #update with keras file location
