@@ -150,7 +150,7 @@ import plotly.graph_objects as go
 
 def app():
     # Initialize Firebase
-    cred = credentials.Certificate("stockpulse-b1818-afca9e4f09d8.json")
+    cred = credentials.Certificate("stockpulse-9127a-455d809b3467.json")
     #firebase_admin.initialize_app(cred)
 
     # Get Firestore database reference
