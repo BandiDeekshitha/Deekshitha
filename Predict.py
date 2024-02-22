@@ -3,6 +3,7 @@ import streamlit as st
 from datetime import date
 
 import yfinance as yf
+import pandas as pd
 from prophet import Prophet
 from prophet.plot import plot_plotly
 from plotly import graph_objs as go
@@ -12,11 +13,11 @@ def app():
 	START = "2015-01-01"
 	TODAY = date.today().strftime("%Y-%m-%d")
 
-	st.title('Stock Forecast App')
+	st.title('LONG TERM PREDICTION')
 
-	stocks = ('GOOG', 'AAPL', 'MSFT', 'GME')
+	stocks =  pd.read_csv('https://raw.githubusercontent.com/dataprofessor/s-and-p-500-companies/master/data/constituents_symbols.txt')
 	selected_stock = st.selectbox('Select dataset for prediction', stocks)
-
+ 
 	n_years = st.slider('Years of prediction:', 1, 4)
 	period = n_years * 365
 

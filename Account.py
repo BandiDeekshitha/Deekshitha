@@ -109,6 +109,7 @@ def app():
         try:
             
             user = auth.get_user_by_email(email)
+            # user = auth.sign_in_with_email_and_password(email, password)
             print(user.uid)
             # print(user.password)
             st.write('Login success')
@@ -116,7 +117,6 @@ def app():
             st.session_state.useremail=user.email
             st.session_state.signedout = True
             st.session_state.signout = True
-           
  
         except:
             st.warning('Login Failed')
